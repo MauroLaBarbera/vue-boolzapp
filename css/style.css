@@ -72,7 +72,7 @@ a {
 
 /* ICONS */
 .icon i {
-    padding-right: 25px;
+    padding-right: 20px;
     color: #b8b8b8;
     font-size: 20px;
 }
@@ -158,11 +158,23 @@ a {
     flex-direction: column;
 }
 
+.content-header .avatar .status {
+    margin-left: 10px;
+}
+
+.content-header .avatar .status h5 {
+    color: #767d80;
+    margin-top: 5px;
+}
+
 .content-main {
     flex-grow: 1;
     background-image: url('../img/mine.jpg');
     overflow-y: auto;
+    padding-top: 40px;
 }
+
+/* CHAT MESSAGE*/
 
 .message-sent {
     display: flex;
@@ -171,7 +183,7 @@ a {
 }
 
 .message-box {
-    margin: 50px 100px 0;
+    margin: 10px 100px 0;
     width: 350px;
     padding: 15px;
     background: #dbf9bd;
@@ -189,6 +201,8 @@ a {
     justify-content: end;
 }
 
+
+
 .content-header,
 .content-footer {
     display: flex;
@@ -197,6 +211,8 @@ a {
     background: #ececec;
 }
 
+
+/*FOOTER*/
 .content-footer {
     padding: 10px;
 }
