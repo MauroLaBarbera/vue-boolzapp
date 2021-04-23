@@ -70,7 +70,7 @@ a {
 
 /* ICONS */
 .icon i {
-    padding-right: 20px;
+    padding-right: 25px;
     color: #b8b8b8;font-size: 20px;}
 
 /* BANNER NOTIFICATIONS */
@@ -150,6 +150,31 @@ a {
 .content-main {
     flex-grow: 1;
     background-image: url('../img/mine.jpg');
+}
+
+.message-sent {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.message-box {
+    margin: 50px 100px 0;
+    width: 350px;
+    padding: 15px;
+    background: #dbf9bd;
+    border-radius: 10px;
+}
+
+.message-received .message-box {
+    background: #fff;
+}
+
+.clock-sent {
+    color: #b8b8b8;
+    font-size: 10px;
+    display: flex;
+    justify-content: end;
 }
 
 .content-header,
