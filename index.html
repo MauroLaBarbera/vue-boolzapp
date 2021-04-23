@@ -57,21 +57,10 @@
             </div>
             <!-- CHAT-LIST -->
             <div class="chat-list">
-                <div class="avatar">
-                    <img src="./img/avatar_io.jpg" alt="">
-                    <span>Nome Utente</span>
-                </div>
-                <div class="avatar">
-                    <img src="./img/avatar_io.jpg" alt="">
-                    <span>Nome Utente</span>
-                </div>
-                <div class="avatar">
-                    <img src="./img/avatar_io.jpg" alt="">
-                    <span>Nome Utente</span>
-                </div>
-                <div class="avatar">
-                    <img src="./img/avatar_io.jpg" alt="">
-                    <span>Nome Utente</span>
+                <div class="avatar"
+                v-for="(nome, index) in contact">
+                    <img :src="`./img/avatar${nome.avatar}.jpg`" alt="">
+                    <span>{{ nome.name }}</span>
                 </div>
             </div>
         </aside>
@@ -81,8 +70,8 @@
             <!-- CONTENT HEADER -->
             <section class="content-header">
                 <div class="avatar">
-                    <img src="./img/avatar_io.jpg" alt="">
-                    <span>Nome Utente</span>
+                    <img src="./img/avatar_1.jpg" alt="">
+                    <span>Michele</span>
                 </div>
                 <div class="icon">
                     <i class="fas fa-search"></i>
@@ -125,6 +114,6 @@
 
 
     <!-- JS -->
-    <script src="./js/main.js"></script>
+    <script src="./js/contatti.js"></script>
 </body>
 </html>
