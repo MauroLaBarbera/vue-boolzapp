@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- FONTAWESOME -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css' integrity='sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==' crossorigin='anonymous'/>
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <!-- VUE JS -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <title>Boolzapp</title>
+</head>
+<body>
+    
+    <div id="app" class="container">
+        <!-- ASIDE -->
+        <aside class="side">
+            <div class="side-head">
+                <div class="avatar">
+                    <img src="./img/avatar_io.jpg" alt="">
+                    <span>Nome Utente</span>
+                </div>
+                <div class="icon">
+                    <i class="fas fa-circle-notch"></i>
+                    <i class="fas fa-comment-alt"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                </div>
+            </div>
+
+            <!-- NOTIFICATION -->
+            <div class="act-notif">
+                <div class="icon-bell">
+                    <i class="fas fa-bell-slash"></i>
+                </div>
+                <div class="text">
+                        <span>Ricevi notifiche di nuovi messaggi</span>
+                    <div class="link">
+                        <a href="#">Attiva notifiche desktop</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SEARCHBAR -->
+            <div class="searchbar">
+                <div class="sub-searchbar">
+                    <button>
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <input class="chat-search" type="text"
+                    placeholder="Cerca o inizia una nuova chat">
+                </div>
+            </div>
+            <!-- CHAT-LIST -->
+            <div class="chat-list">
+                <div class="avatar">
+                    <img src="./img/avatar_io.jpg" alt="">
+                    <span>Nome Utente</span>
+                </div>
+                <div class="avatar">
+                    <img src="./img/avatar_io.jpg" alt="">
+                    <span>Nome Utente</span>
+                </div>
+                <div class="avatar">
+                    <img src="./img/avatar_io.jpg" alt="">
+                    <span>Nome Utente</span>
+                </div>
+                <div class="avatar">
+                    <img src="./img/avatar_io.jpg" alt="">
+                    <span>Nome Utente</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="content">
+            <section class="content-header">
+                <div class="avatar">
+                    <img src="./img/avatar_io.jpg" alt="">
+                    <span>Nome Utente</span>
+                </div>
+                <div class="icon">
+                    <i class="fas fa-search"></i>
+                    <i class="fas fa-paperclip"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                </div>
+            </section>
+            <section class="content-main">
+
+            </section>
+            <section class="content-footer">
+                footer
+            </section>
+        </main>
+    </div>
+
+
+
+
+    <!-- JS -->
+    <script src="./js/main.js"></script>
+</body>
+</html>

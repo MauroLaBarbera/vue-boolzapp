@@ -1,0 +1,164 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-image: linear-gradient(
+        to bottom, 
+        #128C7E 0%,
+        #128C7E 15%, 
+        #ECE5DD 15%, 
+        #ECE5DD 100%
+    );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+}
+
+/*UTILITIES*/
+
+a {
+    color: #7099af;
+}
+
+
+/* LAYOUT */
+.container {
+    display: flex;
+    width: 80%;
+    min-width: 900px;
+    height: 95%;
+    background: #fff;
+}
+
+/*ASIDE*/
+.side {
+    flex-basis: 35%;
+}
+
+.side-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ececec;
+    border-right: 1px solid #b8b8b8;
+}
+
+/* AVATAR */
+.avatar {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.avatar img,
+.icon-bell{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.avatar span {
+    margin-left: 10px;    
+}
+
+/* ICONS */
+.icon i {
+    padding-right: 20px;
+    color: #b8b8b8;font-size: 20px;}
+
+/* BANNER NOTIFICATIONS */
+.act-notif {
+    display: flex;
+    align-items: center;
+    background: #a0ddfe;
+    padding: 15px;
+}
+
+.icon-bell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    color: #a0ddfe;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+/* SEARCHBAR */
+.searchbar {
+    background: #fafafa;
+}
+.sub-searchbar {
+    display: flex;
+    padding: 10px;
+}
+
+.sub-searchbar button,
+.sub-searchbar .chat-search {
+    outline: none;
+    background: #fff;
+    border: 1px solid #fafafa;
+
+}
+
+.sub-searchbar button {
+    flex-basis: 15%;
+    cursor: pointer;
+    padding: 5px;
+    color: #b8b8b8;
+    font-size: 16px;
+}
+
+.sub-searchbar .chat-search {
+    flex-grow: 1;
+    padding-left: 8px;
+    color:#dcdcde ;
+}
+
+/* CHAT LIST */
+.chat-list .avatar {
+    padding: 10px;
+    border-bottom: 1px solid #fafafa;
+    margin-left: 10px;
+}
+
+.chat-list .avatar:last-child {
+    border: 0;
+}
+
+.chat-list img {
+    width: 60px;
+    height: 60px;
+}
+
+
+/*MAIN CONTENT*/
+.content {
+    flex-basis: 65%;
+    background: #aaa;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-main {
+    flex-grow: 1;
+    background-image: url('../img/mine.jpg');
+}
+
+.content-header,
+.content-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ececec;
+}
+
+
+
