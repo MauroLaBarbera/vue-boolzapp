@@ -90,11 +90,37 @@ const app = new Vue({
             },
         ],
         indexMessage: 0,
+        newMessage: '',
     },
     methods: {
         setChat(index) {
             this.indexMessage = index;
-        }
+        },
+        //ADD NUOVO MESSAGGIO
+        addMessage() {
+
+            if(this.newMessage !== '') {
+
+                this.contact[this.indexMessage].messages.push({
+                    date: '26/04/2021 16:25:45',
+                    message: this.newMessage,
+                    status: 'sent',
+                });
+
+                //RESET
+                this.newMessage = '';
+                this.$refs.inputMessage.focus();
+                
+                //RISPOSTA 
+                setTimeout(()=>{
+                    this.contact[this.indexMessage].messages.push({
+                        date: '26/04/2021 16:35:45',
+                        message: 'Ok',
+                        status: 'received',
+                    });
+                },1000);
+            }
+        },
     },
 });
 

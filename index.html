@@ -118,7 +118,11 @@
                 <i class="far fa-grin-beam"></i>
                 <input type="text"
                 class="write-messagge"
-                placeholder="Scrivi un messaggio">
+                placeholder="Scrivi un messaggio"
+                v-model.trim="newMessage"
+                @keyup.enter="addMessage"
+                ref="inputMessage"
+                >
                 <i class="fas fa-microphone"></i>
             </section>
         </main>
