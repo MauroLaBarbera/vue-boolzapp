@@ -22,8 +22,8 @@
         <aside class="side">
             <div class="side-head">
                 <div class="avatar">
-                    <img src="./img/avatar_io.jpg" alt="">
-                    <span>Nome Utente</span>
+                    <img src="./img/avataaars.png" alt="">
+                    <span>Mauro</span>
                 </div>
                 <div class="icon">
                     <i class="fas fa-circle-notch"></i>
@@ -52,7 +52,10 @@
                         <i class="fas fa-search"></i>
                     </button>
                     <input class="chat-search" type="text"
-                    placeholder="Cerca o inizia una nuova chat">
+                    placeholder="Cerca o inizia una nuova chat"
+                    v-model.trim="searchText"
+                    @keyup="searchIncludes"
+                    >
                 </div>
             </div>
             <!-- CHAT-LIST -->
@@ -60,6 +63,7 @@
                 <div class="avatar"
                 v-for="(nome, index) in contact"
                 :class=" {active: index == indexMessage}"
+                v-if="nome.visible"
                 @click="setChat(index)">
                     <img :src="`./img/avatar${nome.avatar}.jpg`" alt="">
                     <span>{{ nome.name }}</span>
