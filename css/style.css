@@ -27,6 +27,11 @@ a {
     color: #7099af;
 }
 
+img,
+i {
+    cursor: pointer;
+}
+
 
 /* LAYOUT */
 .container {
@@ -68,6 +73,10 @@ a {
 
 .avatar span {
     margin-left: 10px;    
+}
+
+.avatar.active {
+    background:rgba(0,0,0, .1);
 }
 
 /* ICONS */
@@ -133,6 +142,12 @@ a {
     padding: 10px;
     border-bottom: 1px solid #fafafa;
     margin-left: 10px;
+    cursor: pointer;
+}
+
+.chat-list .avatar:first-child:focus,
+.chat-list .avatar:hover {
+    background:rgba(0,0,0, .1);
 }
 
 .chat-list {
@@ -146,7 +161,7 @@ a {
 .chat-list img {
     width: 60px;
     height: 60px;
-    
+    cursor: pointer;
 }
 
 
@@ -176,7 +191,7 @@ a {
 
 /* CHAT MESSAGE*/
 
-.message-sent {
+.messageSent {
     display: flex;
     flex-direction: column;
     align-items: end;
@@ -190,7 +205,7 @@ a {
     border-radius: 10px;
 }
 
-.message-received .message-box {
+.messageReceived{
     background: #fff;
 }
 

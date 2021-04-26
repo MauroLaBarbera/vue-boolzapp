@@ -89,6 +89,12 @@ const app = new Vue({
                 ],
             },
         ],
+        indexMessage: 0,
+    },
+    methods: {
+        setChat(index) {
+            this.indexMessage = index;
+        }
     },
 });
 

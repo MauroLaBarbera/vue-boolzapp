@@ -58,7 +58,9 @@
             <!-- CHAT-LIST -->
             <div class="chat-list">
                 <div class="avatar"
-                v-for="(nome, index) in contact">
+                v-for="(nome, index) in contact"
+                :class=" {active: index == indexMessage}"
+                @click="setChat(index)">
                     <img :src="`./img/avatar${nome.avatar}.jpg`" alt="">
                     <span>{{ nome.name }}</span>
                 </div>
@@ -69,10 +71,14 @@
         <main class="content">
             <!-- CONTENT HEADER -->
             <section class="content-header">
-                <div class="avatar">
-                    <img src="./img/avatar_1.jpg" alt="">
+                <div class="avatar"
+                v-for="(nome, index) in contact"
+                :class=" {active: index == indexMessage}"
+                v-if="avatar == avatar.active"
+                >
+                    <img :src="`./img/avatar${nome.avatar}.jpg`" alt="">
                     <div class="status">
-                        <h4>Michele</h4>
+                        <h4>{{ nome.name }}</h4>
                         <h5>Ultimo accesso oggi alle 10:30</h5>
                     </div>
                 </div>
@@ -84,17 +90,23 @@
             </section>
             <!-- CONTENT MAIN -->
             <section class="content-main">
-                <div class="message-sent">
-                   <div class="message-box">
-                    <span>Messaggio inviato</span>
+                <div 
+                v-for="messaggi in contact[indexMessage].messages"
+                :class="{messageSent: messaggi.status == 'sent'}"
+                >
+                   <div class="message-box"
+                   v-if="messaggi.status == 'sent'"
+                   >
+                    <span> {{ messaggi.message }} </span>
                     <div class="clock">
                         23/04/2021 15:50:00
                     </div>
                    </div>
-                </div>
-                <div class="message-received">
-                   <div class="message-box">
-                    <span>Messaggio ricevuto</span>
+                   <div class="message-box"
+                   :class="{messageReceived: messaggi.status == 'received'}"
+                   v-if="messaggi.status == 'received'"
+                   >
+                    <span> {{ messaggi.message }} </span>
                     <div class="clock">
                         23/04/2021 15:50:00
                     </div>
