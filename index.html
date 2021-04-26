@@ -73,8 +73,7 @@
             <section class="content-header">
                 <div class="avatar"
                 v-for="(nome, index) in contact"
-                :class=" {active: index == indexMessage}"
-                v-if="avatar == avatar.active"
+                v-if="index == indexMessage"
                 >
                     <img :src="`./img/avatar${nome.avatar}.jpg`" alt="">
                     <div class="status">
@@ -99,7 +98,7 @@
                    >
                     <span> {{ messaggi.message }} </span>
                     <div class="clock">
-                        23/04/2021 15:50:00
+                        {{ messaggi.date}}
                     </div>
                    </div>
                    <div class="message-box"
@@ -108,7 +107,7 @@
                    >
                     <span> {{ messaggi.message }} </span>
                     <div class="clock">
-                        23/04/2021 15:50:00
+                        {{ messaggi.date}}
                     </div>
                    </div>
                 </div>
