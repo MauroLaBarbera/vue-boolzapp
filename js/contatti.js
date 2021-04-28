@@ -1,6 +1,10 @@
 /**
  * Boolzapp
  */
+
+//DAY JS PLUGINS 
+dayjs.extend(dayjs_plugin_customParseFormat);
+
 const app = new Vue({
     el: '#app',
     data: {
@@ -160,6 +164,8 @@ const app = new Vue({
         indexMessage: 0,
         newMessage: '',
         searchText:'',
+        dropMenu: false,
+        darkMode: false,
     },
     methods: {
         setChat(index) {
@@ -171,7 +177,7 @@ const app = new Vue({
             if(this.newMessage !== '') {
 
                 this.contact[this.indexMessage].messages.push({
-                    date: '26/04/2021 16:25:45',
+                    date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
                     message: this.newMessage,
                     status: 'sent',
                 });
@@ -183,13 +189,14 @@ const app = new Vue({
                 //RISPOSTA 
                 setTimeout(()=>{
                     this.contact[this.indexMessage].messages.push({
-                        date: '26/04/2021 16:35:45',
+                        date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
                         message: 'Ok',
                         status: 'received',
                     });
                 },1000);
             }
         },
+        //SEARCH BAR
         searchIncludes() {
            this.contact.forEach(element => {
             if (element.name.toLowerCase().includes(this.searchText.toLowerCase())){
@@ -198,9 +205,14 @@ const app = new Vue({
                 element.visible = false;
             }
            });
-    
+        },
+        //SHOW DROP MENU
+        showMenu() {
+            this.dropMenu = !this.dropMenu;
+            
+        },
+        darkModeApp() {
+            this.darkMode = !this.dropMenu;   
         }
     },  
 });
-
-// Elenco contatti
