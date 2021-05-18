@@ -257,6 +257,7 @@ i {
 /*FOOTER*/
 .content-footer {
     padding: 10px;
+    position: relative;
 }
 
 .content-footer i{
@@ -265,6 +266,23 @@ i {
     color: #82888b;
     cursor: pointer;
     background: #f3efeb;
+}
+
+/* EMOJI */
+.content-footer .drop-emoji {
+    position: absolute;
+    bottom: 76px;
+    right: 0px;
+    width: 100%;
+    height: 200px;
+    background: #ececec;
+}
+
+.content-footer .drop-emoji li{
+    list-style: none;
+    display: inline;
+    font-size: 20px;
+    cursor: pointer;
 }
 
 /* WRITE MESSAGE */

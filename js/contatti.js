@@ -161,11 +161,14 @@ const app = new Vue({
                 ],
             },
         ],
+        emoji: ["✌","😂","😝","😁","😱","👉","🙌","🍻","🔥","🌈","☀","🎈","🌹","💄","🎀","⚽","🎾","🏁","😡","👿","🐻","🐶","🐬","🐟","🍀","👀","🚗","🍎","💝","💙","👌","❤","😍","😉","😓","😳","💪","💩","🍸","🔑","💖","🌟","🎉","🌺","🎶","👠","🏈","⚾","🏆","👽","💀","🐵","🐮","🐩","🐎","💣","👃","👂","🍓","💘","💜","👊","💋","😘","😜","😵","🙏","👋","🚽","💃","💎","🚀","🌙","🎁","⛄","🌊","⛵","🏀","🎱","💰","👶","👸","🐰","🐷","🐍","🐫","🔫","👄","🚲","🍉","💛","💚"],
         indexMessage: 0,
+        setEmoji: '',
         newMessage: '',
         searchText:'',
         dropMenu: false,
         darkMode: false,
+        emojiShow: false,
     },
     methods: {
         setChat(index) {
@@ -209,10 +212,16 @@ const app = new Vue({
         //SHOW DROP MENU
         showMenu() {
             this.dropMenu = !this.dropMenu;
-            
         },
-        darkModeApp() {
-            this.darkMode = !this.dropMenu;   
+        showEmojiMenu() {
+            this.emojiShow = !this.emojiShow;
+        },
+        addEmoji(index) {
+            const thisEmoji = this.emoji[index];
+            this.newMessage += thisEmoji;
+
+            this.$refs.inputMessage.focus();
+            
         }
     },  
 });

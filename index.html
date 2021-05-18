@@ -146,7 +146,20 @@
 
             <!-- CONTENT FOOTER -->
             <section class="content-footer">
-                <i class="far fa-grin-beam"></i>
+                 <!-- EMOJI -->
+                 <ul class="drop-emoji"
+                     
+                    v-if="emojiShow"
+                 >
+                    <li v-for="(emoticon, index) in emoji"
+                    @click="addEmoji(index)"
+                    >
+                        {{ emoticon }}
+                    </li>
+                </ul>
+                <i class="far fa-grin-beam"
+                @click="showEmojiMenu"
+                ></i>
                 <input type="text"
                 class="write-messagge"
                 placeholder="Scrivi un messaggio"
